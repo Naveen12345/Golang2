@@ -1,0 +1,74 @@
+SYNTAX:-
+
+type Address struct {
+      name string 
+      street string
+      city string
+      state string
+      Pincode int
+}
+
+1)
+
+
+package main 
+
+import "fmt"
+
+
+type Address struct { 
+	Name string 
+	city string 
+	Pincode int
+} 
+
+func main() { 
+ 
+	var a Address 
+	fmt.Println(a) 
+ 
+	a1 := Address{"naveen", "Hyderabad", 123124} 
+
+	fmt.Println("Address1: ", a1) 
+ 
+	a2 := Address{Name: "navy", city: "Bangalore",Pincode: 560037} 
+
+	fmt.Println("Address2: ", a2) 
+
+
+	a3 := Address{Name: "Chennai"} 
+	fmt.Println("Address3: ", a3) 
+} 
+
+{  0}
+
+OUTPUT:-
+
+Address1:  {naveen Hyderabad 123124}
+Address2:  {navy Bangalore 560037}
+Address3:  {Chennai  0}
+
+
+2)
+package main 
+
+import "fmt" 
+type Car struct { 
+	Name, Model, Color string 
+	Weight		 float64 
+} 
+ 
+func main() { 
+	c := Car{Name: "Ferrari", Model: "GTC4", 
+			Color: "Red", Weight: 1920} 
+
+ 
+	fmt.Println("Car Name: ", c.Name) 
+	fmt.Println("Car Color: ", c.Color)
+}
+
+OUTPUT:-
+
+Car Name:  Ferrari
+Car Color:  Red
+
